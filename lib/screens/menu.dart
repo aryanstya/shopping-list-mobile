@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_list/widgets/left_drawer.dart';
+import 'package:shopping_list/widgets/shop_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -25,13 +27,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        title: Text('Shopping List'),
-        titleTextStyle: TextStyle(
-            color: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          'Shopping List',
         ),
         backgroundColor: Colors.indigo,
-        ),
+        foregroundColor: Colors.white,
+      ),
+      // Masukkan drawer sebagai parameter nilai drawer dari widget Scaffold
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
